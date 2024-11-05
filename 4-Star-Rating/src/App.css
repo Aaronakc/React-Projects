@@ -1,0 +1,17 @@
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star{
+  font-size: 60px;
+}
+.colored {
+  color: orange;
+}
+
+.uncolored{
+  color: black;
+}
