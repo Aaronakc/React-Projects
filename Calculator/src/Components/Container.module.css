@@ -1,0 +1,11 @@
+.calculatorContainer{
+  border: 1px solid black;
+  width: 330px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(22, 22, 22);
+  border-radius: 10px;
+}
