@@ -1,0 +1,11 @@
+.center{
+  text-align: center;
+
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
