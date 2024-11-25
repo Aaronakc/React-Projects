@@ -24,6 +24,14 @@ const Todo = () => {
     }
 
   }
+
+  const deleteTask=(id)=>{
+    setTodoList((todolist)=>{
+      return todolist.filter((todo)=>todo.id !==id)
+    })
+    
+
+  }
   return (
     <div className='bg-neutral-200 flex flex-col  w-full  max-w-[600px] h-screen max-h-[500px] py-3'>
       <h1 className='pb-4 font-bold text-2xl'>Todo List</h1>
@@ -34,8 +42,8 @@ const Todo = () => {
        </div>
 
        <div className='mt-7'>
-      {todoList.map((item,index)=>{
-        return <TodoList key={index} text={item.todoTask}/>
+      {todoList?.map((item,index)=>{
+        return <TodoList key={index} text={item.todoTask} id={item.id} completedTask={item.completedTask} deleteTask={deleteTask}/>
       })}
        </div>
       </div>
