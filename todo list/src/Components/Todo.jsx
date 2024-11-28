@@ -29,8 +29,17 @@ const Todo = () => {
     setTodoList((todolist)=>{
       return todolist.filter((todo)=>todo.id !==id)
     })
-    
+  }
 
+  const completedTask = id => {
+    setTodoList(todoList => {
+      return todoList.map(todo => {
+        if(todo.id === id) {
+          return {...todo, completedTask: !todo.completedTask}
+        }
+        return todo
+      })
+    })
   }
   return (
     <div className='bg-neutral-200 flex flex-col  w-full  max-w-[600px] h-screen max-h-[500px] py-3'>
@@ -43,7 +52,7 @@ const Todo = () => {
 
        <div className='mt-7'>
       {todoList?.map((item,index)=>{
-        return <TodoList key={index} text={item.todoTask} id={item.id} completedTask={item.completedTask} deleteTask={deleteTask}/>
+        return <TodoList key={index} text={item.todoTask} id={item.id} completedTask={item.completedTask} deleteTask={deleteTask} completeTask={completedTask}/>
       })}
        </div>
       </div>
